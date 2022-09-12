@@ -59,24 +59,25 @@ Btn.addEventListener("click", () => {
   }
 });
 
-// let looseFocusNotification;
-// let interval;
-// document.addEventListener("visibilitychange", () => {
-//   if (document.visibilityState === "hidden") {
-//     const onFocusedTime = new Date();
-//     setInterval(() => {
-//       looseFocusNotification = new Notification(
-//         "You Can click on this notificaiton to finish checking checking your score",
-//         {
-//           body: `${UserUsername} Your have been gone for ${Math.round(
-//             (new Date() - onFocusedTime) / 1000
-//           )} seconds, You can go back to finish your operation`,
-//           tag: "undo operation",
-//         }
-//       );
-//     }, 100);
-//   } else {
-//     looseFocusNotification.close();
-//     clearInterval();
-//   }
-// });
+let looseFocusNotification;
+let interval;
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") {
+    const onFocusedTime = new Date();
+   interval = setInterval(() => {
+      looseFocusNotification = new Notification(
+        "You Can click on this notificaiton to finish checking checking your score",
+        {
+          body: `${UserUsername} Your have been gone for ${Math.round(
+            (new Date() - onFocusedTime) / 1000
+          )} seconds, You can go back to finish your operation`,
+          tag: "undo operation",
+        }
+      );
+    }, 100);
+  } else {
+   if(interval) clearInterval(interval);
+   if(looseFocusNotification) looseFocusNotification.close();
+    
+  }
+});
