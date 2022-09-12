@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta title="Total score of exam">
+    <meta name="keywords" content="calculating student total score with javascript">
+    <title>Student | Total score</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="shortcut icon" href="/notificaitonlogo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-8 offset-2 card p-4" style="margin-top: 50px;">
+            <h1 class="text-info text-center mb-5">Check Your Total Score</h1>
+            <input type="text" id="username" value="KellynCodes" required class="form-control text-center">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>SUBJECTS</th>
+                        <th>SCORES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input id="english" type="text" class="form-control" value="English"></td>
+                        <td><input id="engscore" type="text" class="form-control" placeholder="Score"></td>
+                    </tr>
+                    <tr>
+                        <td><input id="mathematics" type="text" class="form-control" value="Mathematics">
+                        </td>
+                        <td><input id="mathscore" type="text" class="form-control" placeholder="Score">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input id="chemistry" type="text" class="form-control" value="Chemistry"></td>
+                        <td><input id="chemscore" type="text" class="form-control" placeholder="Score">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input id="computer" type="text" class="form-control" value="Computer"></td>
+                        <td><input id="compscore" type="text" class="form-control" placeholder="Score">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input id="biology" type="text" class="form-control" value="Biology"></td>
+                        <td><input id="bioscore" type="text" class="form-control" placeholder="Score">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-info text-white mb-5" style="font-weight: 800;">Total Score</button>
+            <div style="display: none;" class="alert alert-info text-center">
+                <b id="totalscoreoutput">
+                    <h3 id="message" class="text-center"></h3>
+                </b>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
